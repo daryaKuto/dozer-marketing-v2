@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { NAV_LINKS } from '@/constants';
+import VideoPlayer from "@/components/VideoPlayer";
 
 const Navbar: React.FC = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -70,10 +71,10 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Image Section with Dark Overlay */}
-      <div className="relative w-full h-[500px]">
+      {/* <div className="relative w-full h-[500px]">
         <Image src="/IMG_1869.png" alt="Background Image" fill className="object-cover w-full h-full" />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      </div>
+      </div> */}
     </div>
   );
 };
