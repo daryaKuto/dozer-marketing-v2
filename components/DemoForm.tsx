@@ -49,14 +49,24 @@ const DemoForm: NextPage = () => {
       companyName: target.companyName.value.trim(),
       ownerOrManager: ownerSelection === 'Other' ? otherRole : ownerSelection,
       title: target.title.value.trim(),
-      fleetSize: target.fleetSize.value.trim(),
+      fleetSize: parseInt(target.fleetSize.value.trim()),
       locations,
       demoSchedule: target.demoSchedule.value.trim(),
     };
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setErrorMessage("Submission Successful!");
+      const response = await fetch('/api/submit-demo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+
+      if (response.ok) {
+        setErrorMessage("Submission Successful!");
+      } else {
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || 'Submission failed');
+      }
     } catch (error) {
       console.error("Submission error:", error);
       setErrorMessage("An error occurred. Please try again.");
@@ -215,7 +225,7 @@ const DemoForm: NextPage = () => {
               required
               className="p-3 border border-medium-grey rounded mt-1 focus:border-dozer-yellow focus:outline-none"
             >
-              <option value="" disabled selected>Select an option</option>
+              <option value="" disabled>Select an option</option>
               <option value="1-2 weeks">1-2 weeks</option>
               <option value="1 month">1 month</option>
               <option value="2+ months">2+ months</option>
