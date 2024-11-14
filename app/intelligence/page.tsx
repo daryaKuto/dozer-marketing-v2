@@ -3,6 +3,8 @@ import Image from "next/image";
 import VideoPlayer from "@/components/VideoPlayer";
 import IntelligenceSec1 from "@/components/IntelligenceSec1";
 import IntelligenceSec2 from "@/components/IntelligenceSec2";
+import IntelligenceSec3 from "@/components/IntelligenceSec3";
+import IntelligenceSec4 from "@/components/IntelligenceSec4";
 
 const IntelligencePage = () => {
   const videoUrl =
@@ -31,9 +33,9 @@ const IntelligencePage = () => {
 
       {/* Important objects in a chaotic environment section */}
       <IntelligenceSec1 />
-
-      {/* Additional sections */}
       <IntelligenceSec2 />
+      <IntelligenceSec3 />
+      <IntelligenceSec4 />
     </div>
   );
 };
