@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from "next/image";
-import DashboardsSec1 from '@/components/DashboardsSec1';
-import DashboardsSec2 from '@/components/DashboardsSec2';
-import DashboardsSec3 from '@/components/DashboardsSec3';
+import DashboardsSec1 from '@/components/dashboards sections/DashboardsSec1';
+import DashboardsSec2 from '@/components/dashboards sections/DashboardsSec2';
+import DashboardsSec3 from '@/components/dashboards sections/DashboardsSec3';
 
 const DashboardsPage = (): JSX.Element => {
   return (

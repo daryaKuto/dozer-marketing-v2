@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
-import CameraSec1 from '@/components/CameraSec1';
-import CameraSec2 from '@/components/CameraSec2';
+import CameraSec1 from '@/components/camera sections/CameraSec1';
+import CameraSec2 from '@/components/camera sections/CameraSec2';
 
 const CameraPage = (): JSX.Element => {
   return (
