@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
               Login
             </Link>
             <Link
-              href="/request-demo"
+              href="/demo"
               className="uppercase border border-white text-white px-4 py-2 hover:border-dozer-yellow hover:text-dozer-yellow font-medium text-[16px]"
             >
               Request Demo

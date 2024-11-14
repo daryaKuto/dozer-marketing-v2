@@ -22,7 +22,7 @@ const CameraPage = (): JSX.Element => {
             fields of view, proximity
             </h1>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">
-            measurement and 360 degrees of vision
+            measurement and 360
             </h1>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">
             degrees of vision

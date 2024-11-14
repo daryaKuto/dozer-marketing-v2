@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from "next/image";
-import DashboardsSec1 from '@/components/DashboardsSec1';
-import DashboardsSec2 from '@/components/DashboardsSec2';
-import DashboardsSec3 from '@/components/DashboardsSec3';
+import DemoForm from '@/components/DemoForm';
 
-const DashboardsPage = (): JSX.Element => {
+
+const DemoPage = (): JSX.Element => {
   return (
     <div className="w-full">
       <section className="w-full">
@@ -16,25 +15,21 @@ const DashboardsPage = (): JSX.Element => {
 
           {/* Text Overlay */}
           <div className="absolute inset-0 flex flex-col justify-center items-start text-left px-4 sm:px-8 lg:px-16 z-10">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">
-            Apps for desktop, tablets, and
-            </h1>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">
-            mobile
+            <h1 className="uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">
+            See us in action
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white max-w-full md:max-w-2xl uppercase">
-            Powerful dashboards combine vehicle GPS, video, and safety data to give a full picture of how your fleet is performing.</p>
+            Fill out the form below to schedule your in-person demo!</p>
           </div>
         </div>
       </section>
 
       {/* Additional sections for CameraPage */}
       {/* Sections go here */}
-      <DashboardsSec1 />
-      <DashboardsSec2 />
-      <DashboardsSec3 />
+      <DemoForm />
+
     </div>
   );
 };
 
-export default DashboardsPage;
+export default DemoPage;

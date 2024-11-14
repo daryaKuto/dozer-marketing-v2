@@ -10,11 +10,11 @@ const HeroHome = (): JSX.Element => {
 
         {/* Text Overlay */}
         <div className="absolute inset-0 flex flex-col justify-center items-start text-left px-4 sm:px-8 lg:px-16 z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">
+          <h1 className="uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">
             Monitor your 
           </h1>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">equipment from anywhere</h1>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">anywhere</h1>
+          <h1 className="uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">equipment from</h1>
+          <h1 className="uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">anywhere</h1>
           <p className="text-lg sm:text-xl md:text-2xl text-white max-w-2xl mb-6">
             One system to make your equipment fleet safer, more secure, and easier to manage. Prevent accidents with real-time alerts. Track site progress and risk from your dashboard.
           </p>
