@@ -15,7 +15,7 @@ export default function Home() {
       <VideoStreaming />
       <Dashboard />
       <Installation />
-      <Testimonials />
+      {/* <Testimonials /> */}
     </div>
   );
 }

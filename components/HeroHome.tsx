@@ -4,9 +4,21 @@ const HeroHome = (): JSX.Element => {
   return (
     <section className="w-full">
       {/* Full-Width Image Section with Dark Overlay */}
-      <div className="relative w-full h-[500px]">
+      <div className="relative w-full h-[800px]">
         <Image src="/IMG_1869.png" alt="Background Image" fill className="object-cover w-full h-full" />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        {/* Text Overlay */}
+        <div className="absolute inset-0 flex flex-col justify-center items-start text-left px-4 sm:px-8 lg:px-16 z-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">
+            Monitor your 
+          </h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">equipment from anywhere</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">anywhere</h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-white max-w-2xl mb-6">
+            One system to make your equipment fleet safer, more secure, and easier to manage. Prevent accidents with real-time alerts. Track site progress and risk from your dashboard.
+          </p>
+        </div>
       </div>
 
       {/* Key Features Section */}

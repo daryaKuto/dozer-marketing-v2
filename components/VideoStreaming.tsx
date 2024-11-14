@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 const VideoStreaming: React.FC = () => {
   return (
@@ -35,21 +35,25 @@ const VideoStreaming: React.FC = () => {
       </div>
 
       {/* Image Block */}
-      <div className="relative w-full h-[400px]">
+      <div className="relative w-full flex items-center justify-center lg:justify-end">
         {/* Background Image */}
-        <Image
-          src="/IMG_1869.png"
-          alt="Video Streaming Background"
-          layout="fill"
-          className=" shadow-md object-cover"
-        />
-        {/* Overlapping Image */}
-        <div className="absolute top-10 left-10 w-[250px] h-[180px] lg:w-[300px] lg:h-[200px]">
+        <div className="relative w-[330px] h-[500px] z-0">
           <Image
-            src="/IMG_1869.png"
+            src="/cabin.png"
+            alt="Video Streaming Background"
+            width={330}
+            height={500}
+            className="shadow-md object-cover rounded"
+          />
+        </div>
+        {/* Overlapping Forward Image */}
+        <div className="absolute left-1 top-12 w-[500px] h-[326px] z-10">
+          <Image
+            src="/ai_sees_everything.png"
             alt="Video Streaming Overlap"
-            layout="fill"
-            className=" shadow-md object-cover"
+            width={653}
+            height={326}
+            className="shadow-md object-cover rounded"
           />
         </div>
       </div>

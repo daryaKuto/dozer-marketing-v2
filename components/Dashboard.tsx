@@ -7,7 +7,7 @@ const Dashboard: React.FC = () => {
       {/* Image Block */}
       <div className="relative w-full h-[400px]">
         <Image
-          src="/IMG_1869.png" // Placeholder image
+          src="/carousel-1.png" // Placeholder image
           alt="Dashboard Interface"
           layout="fill"
           className="shadow-md object-cover"

@@ -29,12 +29,14 @@ const Installation: React.FC = () => {
       </div>
 
       {/* Image Block */}
-      <div className="relative w-full h-[400px]">
+      <div className="relative w-full h-[500px] ml-16">
         <Image
-          src="/IMG_1869.png" // Placeholder image
+          src="/install.png"
           alt="Installation Image"
-          layout="fill"
-          className=" shadow-md object-cover"
+          layout="fixed"
+          width={300}
+          height={200}
+          className="shadow-md object-cover"
         />
       </div>
     </section>

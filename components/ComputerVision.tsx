@@ -5,30 +5,26 @@ const ComputerVision: React.FC = () => {
   return (
     <section className="max-container padding-container py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
       {/* Image Block */}
-      <div className="relative w-full h-[600px]">
-        {/* Main Large Image */}
+      <div className="relative w-full flex justify-left items-center">
+        {/* Main Large Image with specified dimensions */}
         <Image
-          src="/IMG_1869.png"
+          src="/cabin.png"
           alt="Main Machine Image"
-          layout="fill"
-          className=" shadow-md object-cover"
+          width={330}
+          height={500}
+          className="shadow-md object-cover z-10"
         />
-
         {/* Alert Box (Top Right) */}
-        <div className="absolute top-10 right-10 w-[300px] p-4 bg-white shadow-lg ">
-          {/* Alert Content */}
+        <div className="absolute top-10 right-10 w-[300px] p-4 bg-white shadow-lg z-20">
           <div className="flex items-center space-x-4">
-            {/* Alert Icon */}
             <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-dozer-yellow">
               <span className="text-white text-xl font-bold">!</span>
             </div>
-            {/* Alert Text */}
             <div>
-              <h3 className="text-lg font-bold text-gray-800">Human Proximity</h3>
+              <h3 className="text-lg font-bold text-gray-800">Overhead Electrical Lines</h3>
               <p className="text-sm text-gray-600">2016 CAT 308</p>
             </div>
           </div>
-          {/* Location Info */}
           <div className="mt-4 flex items-center">
             <div className="w-6 h-6 bg-purple-500 text-white flex items-center justify-center mr-2">
               M
@@ -40,10 +36,10 @@ const ComputerVision: React.FC = () => {
         </div>
 
         {/* Small Image (Bottom Center) */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 translate-y-8 w-[300px] h-[200px]">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-10 w-[570px] h-[327px] z-30">
           <Image
-            src="/IMG_1869.png"
-            alt="Small Detection Image"
+            src="/carousel-1.png"
+            alt="Job Site Map"
             layout="fill"
             className="shadow-md object-cover"
           />
