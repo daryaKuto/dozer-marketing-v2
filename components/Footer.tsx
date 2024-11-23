@@ -16,13 +16,11 @@ const Footer: React.FC = () => {
           <li><Link href="/camera" className="hover:text-dozer-yellow">Camera</Link></li>
           <li><Link href="/sensors" className="hover:text-dozer-yellow">Sensors</Link></li>
           <li><Link href="/intelligence" className="hover:text-dozer-yellow">Intelligence</Link></li>
-          <li><Link href="/pricing" className="hover:text-dozer-yellow">Pricing</Link></li>
           <li><Link href="/installation" className="hover:text-dozer-yellow">Installation</Link></li>
-          <li><Link href="/why-dozer" className="hover:text-dozer-yellow">Why Dozer</Link></li>
         </ul>
       </div>
 
-      {/* Company Section */}
+     {/* Company Section */}
       <div className='uppercase'>
         <h3 className="text-lg font-bold text-gray-800 mb-4">Company</h3>
         <ul className="space-y-2">
@@ -49,8 +47,9 @@ const Footer: React.FC = () => {
         <Image
           src="/footer-vehicles.png" // Replace with the actual path
           alt="Footer Vehicles"
-          width={500}  // Adjust width based on your layout
-          height={250} // Adjust height based on your layout
+          width={503}  // Adjust width based on your layout
+          height={254} // Adjust height based on your layout
+          
           className="w-full h-auto object-cover rounded-md"
         />
       </div>

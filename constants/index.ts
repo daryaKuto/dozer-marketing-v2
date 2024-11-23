@@ -3,8 +3,7 @@ export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
     { href: '/cameras', key: 'Cameras ', label: 'Cameras' },
     { href: '/intelligence', key: 'Intelligence', label: 'Intelligence' },
-    { href: '/dashboards', key: 'Dashboards', label: 'Dashboards' },
-    { href: '/pricing', key: 'Pricing', label: 'Pricing' },
+    { href: '/dashboards', key: 'Dashboards', label: 'Dashboards' }
   ];
   
   // TEAM SECTION
@@ -97,14 +96,14 @@ export const BENEFITS = [
   ];
   
   
-  export const TESTIMONIALS = [
-    {
-      title: 'Customer Testimonials',
-      icon: '/testimonials.svg', // Placeholder path for testimonials icon
-      variant: 'blue',
-      description: 'Quotes from existing pilots (when available)',
-    },
-  ];
+  // export const TESTIMONIALS = [
+  //   {
+  //     title: 'Customer Testimonials',
+  //     icon: '/testimonials.svg', // Placeholder path for testimonials icon
+  //     variant: 'blue',
+  //     description: 'Quotes from existing pilots (when available)',
+  //   },
+  // ];
   
   // FOOTER SECTION
   export const FOOTER_LINKS = [
@@ -115,7 +114,7 @@ export const BENEFITS = [
         'Cameras',
         'Dashboards',
         'Intallation',
-        'Testimonials',
+        // 'Testimonials',
         'Contact Us'
   ]}
       ];
