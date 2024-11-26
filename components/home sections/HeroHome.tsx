@@ -2,71 +2,78 @@ import Image from "next/image";
 
 const HeroHome = (): JSX.Element => {
   return (
-    <section className="w-full">
-      {/* Full-Width Image Section with Dark Overlay */}
-      <div className="relative w-full h-[56.25vw]"> {/* Aspect ratio 16:9 */}
-        <Image
-          src="/IMG_1869.png"
-          alt="Background Image"
-          fill
-          className="object-cover w-full h-full"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+    <>
+      {/* Image with Overlay Section */}
+      <section className="w-full overflow-hidden">
+        <div className="relative w-full h-screen"> {/* Full-screen height */}
+          <Image
+            src="/IMG_1869.png"
+            alt="Background Image"
+            fill
+            className="object-cover w-full h-full"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        {/* Text Overlay */}
-        <div className="absolute inset-0 flex flex-col justify-start z-10">
+          {/* Text Overlay */}
           <div
-            className="w-full max-w-[1440px] mx-auto px-[6.25%] flex flex-col"
+            className="absolute inset-0 flex flex-col justify-start z-10"
             style={{
-              paddingTop: "19.44vw", // Responsive spacing for offset from navbar
+              paddingTop: "15%", // Adjusted offset for navbar
             }}
           >
-            <h1
-              className="text-dozer-yellow leading-tight"
+            <div
+              className="w-full max-w-[1440px] mx-auto px-[6.25%] flex flex-col"
               style={{
-                fontFamily: "Gotham",
-                fontWeight: 500,
-                fontSize: "clamp(2.6rem, 3.5vw, 5rem)", // Scales between 50px and 80px
+                paddingTop: "200px", // Adjusted vertical padding for small screens
               }}
             >
-              Monitor your
-            </h1>
-            <h1
-              className="text-dozer-yellow leading-tight"
-              style={{
-                fontFamily: "Gotham",
-                fontWeight: 500,
-                fontSize: "clamp(2.6rem, 3.5vw, 5rem)", // Scales between 50px and 80px
-              }}
-            >
-              equipment from
-            </h1>
-            <h1
-              className="text-dozer-yellow leading-tight"
-              style={{
-                fontFamily: "Gotham",
-                fontWeight: 500,
-                fontSize: "clamp(2.6rem, 3.5vw, 5rem)", // Scales between 50px and 80px
-              }}
-            >
-              anywhere
-            </h1>
-            <p
-              className="text-white max-w-[50%] mb-[2vw]"
-              style={{
-                fontFamily: "Gotham",
-                fontWeight: 400,
-                fontSize: "clamp(1rem, 1.8vw, 1.3rem)", // Scales between 20px and 24px
-                lineHeight: "clamp(1rem, 2.5vw, 2rem)", // Scales between 28px and 40px
-              }}
-            >
-              One system to make your equipment fleet safer, more secure, and
-              easier to manage. Prevent accidents with real-time alerts. Track
-              site progress and risk from your dashboard.
-            </p>
+              <h1
+                className="text-dozer-yellow leading-tight"
+                style={{
+                  fontFamily: "Gotham",
+                  fontWeight: 500,
+                  fontSize: "clamp(2.6rem, 3.5vw, 5rem)", // Scales between 50px and 80px
+                }}
+              >
+                Monitor your
+              </h1>
+              <h1
+                className="text-dozer-yellow leading-tight"
+                style={{
+                  fontFamily: "Gotham",
+                  fontWeight: 500,
+                  fontSize: "clamp(2.6rem, 3.5vw, 5rem)", // Scales between 50px and 80px
+                }}
+              >
+                equipment from
+              </h1>
+              <h1
+                className="text-dozer-yellow leading-tight"
+                style={{
+                  fontFamily: "Gotham",
+                  fontWeight: 500,
+                  fontSize: "clamp(2.6rem, 3.5vw, 5rem)", // Scales between 50px and 80px
+                }}
+              >
+                anywhere
+              </h1>
+              <p
+                className="text-white max-w-[50%] mb-[2vw]"
+                style={{
+                  fontFamily: "Gotham",
+                  fontWeight: 400,
+                  fontSize: "clamp(1rem, 1.8vw, 1.3rem)", // Scales between 20px and 24px
+                  lineHeight: "clamp(1.5rem, 2.5vw, 2rem)", // Scales between 28px and 40px
+                }}
+              >
+                One system to make your equipment fleet safer, more secure, and
+                easier to manage. Prevent accidents with real-time alerts. Track
+                site progress and risk from your dashboard.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Key Features Section */}
       <section className="max-container padding-container py-10 pb-32 lg:py-20">
@@ -154,7 +161,7 @@ const HeroHome = (): JSX.Element => {
           ))}
         </div>
       </section>
-    </section>
+    </>
   );
 };
 

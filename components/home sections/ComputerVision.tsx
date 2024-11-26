@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const ComputerVision: React.FC = () => {
   return (
-    <section className="max-container padding-container py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <section className="max-container padding-container py-16 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
       {/* Image Block */}
       <div className="relative w-full flex justify-left items-center">
         {/* Main Large Image with specified dimensions */}
