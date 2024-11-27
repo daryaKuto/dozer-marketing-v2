@@ -1,16 +1,26 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import { SquareIcon } from "../icons/Icons"; // Import the SquareIcon component
 
 const Dashboard: React.FC = () => {
   return (
-    <section className="max-container padding-container py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <section className="w-full padding-container py-16 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
       {/* Image Block */}
-      <div className="relative w-full h-[400px]">
+      <div
+        className="relative w-full"
+        style={{
+          maxWidth: "600px", // Limit the maximum width for large screens
+          aspectRatio: "16 / 9", // Maintain the aspect ratio
+          margin: "0 auto", // Center the image horizontally
+        }}
+      >
         <Image
           src="/carousel-1.png" // Placeholder image
           alt="Dashboard Interface"
-          layout="fill"
-          className="shadow-md object-cover"
+          layout="responsive"
+          width={16} // Relative to the aspect ratio (16:9)
+          height={9}
+          className="shadow-md object-cover rounded"
         />
       </div>
 
@@ -36,21 +46,21 @@ const Dashboard: React.FC = () => {
             </div>
 
             <ul className="space-y-2 text-gray-600">
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-dozer-yellow mr-4 mt-1"></span>
-                Equipment View
+              <li className="flex items-center">
+                <SquareIcon className="w-4 h-4 flex-shrink-0 mr-4 text-dozer-yellow" />
+                <span>Equipment View</span>
               </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-dozer-yellow mr-4 mt-1"></span>
-                Activity History
+              <li className="flex items-center">
+                <SquareIcon className="w-4 h-4 flex-shrink-0 mr-4 text-dozer-yellow" />
+                <span>Activity History</span>
               </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-dozer-yellow mr-4 mt-1"></span>
-                Incident Management
+              <li className="flex items-center">
+                <SquareIcon className="w-4 h-4 flex-shrink-0 mr-4 text-dozer-yellow" />
+                <span>Incident Management</span>
               </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-dozer-yellow mr-4 mt-1"></span>
-                Safety Alerting
+              <li className="flex items-center">
+                <SquareIcon className="w-4 h-4 flex-shrink-0 mr-4 text-dozer-yellow" />
+                <span>Safety Alerting</span>
               </li>
             </ul>
           </div>

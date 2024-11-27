@@ -32,7 +32,12 @@ const Navbar: React.FC = () => {
       <nav className="uppercase flex items-center justify-between px-6 py-4 font-nav-bar text-dozer-white text-[16px] font-medium tracking-[0px] leading-normal">
         {/* Section 1: Logo */}
         <Link href="/">
-          <Image src="/dozer-logo-public.png" alt="Logo" width={74} height={29} />
+          <Image
+            src="/dozer-logo-public.png"
+            alt="Logo"
+            width={74}
+            height={29}
+          />
         </Link>
 
         {/* Section 2: Navigation Links */}
@@ -87,7 +92,7 @@ const Navbar: React.FC = () => {
           </a>
           <Link
             href="/demo"
-            className="uppercase border border-white text-white px-4 py-2 hover:border-dozer-yellow hover:text-dozer-yellow font-medium text-[16px]"
+            className="uppercase border border-white text-white px-4 py-2 hover:bg-dozer-yellow hover:text-black font-medium text-[16px] transition-colors duration-200"
           >
             Request Demo
           </Link>
@@ -98,12 +103,28 @@ const Navbar: React.FC = () => {
       {menuOpen && (
         <div className="fixed inset-0 bg-black text-dozer-white flex flex-col items-center justify-center space-y-8 z-50">
           {/* Close Button */}
+          {/* Close Button */}
           <button
             onClick={toggleMenu}
-            className="absolute top-6 right-6 text-dozer-yellow text-xl focus:outline-none"
+            className="absolute top-6 right-6 focus:outline-none"
             aria-label="Close menu"
           >
-            X
+            <div className="w-10 h-10 rounded-full border-2 border-dozer-yellow flex items-center justify-center bg-black text-dozer-yellow hover:bg-dozer-yellow hover:text-black transition-colors duration-300">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </div>
           </button>
 
           {/* Links */}
@@ -132,7 +153,7 @@ const Navbar: React.FC = () => {
           <Link
             href="/demo"
             onClick={() => setMenuOpen(false)}
-            className="uppercase bg-dozer-yellow text-white px-6 py-3 text-center font-medium text-[16px] hover:bg-opacity-90 transition-colors duration-200"
+            className="uppercase bg-dozer-yellow text-black px-6 py-3 text-center font-medium text-[16px] hover:bg-orange-600 transition-colors duration-200"
           >
             Request Demo
           </Link>

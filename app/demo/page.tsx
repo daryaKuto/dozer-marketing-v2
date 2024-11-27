@@ -8,11 +8,8 @@ const DemoPage = (): JSX.Element => {
     <div className="w-full">
       <section className="w-full">
         {/* Full-Width Image Section with Dark Overlay */}
-        <div className="relative w-full h-[800px]">
+        <div className="relative w-full h-[400px] bg-black">
           {/* Replace the image if needed */}
-          <Image src="/IMG_1869.png" alt="Background Image" fill className="object-cover w-full h-full" />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
           {/* Text Overlay */}
           <div className="absolute inset-0 flex flex-col justify-center items-start text-left px-4 sm:px-8 lg:px-16 z-10">
             <h1 className="uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">
@@ -23,8 +20,6 @@ const DemoPage = (): JSX.Element => {
           </div>
         </div>
       </section>
-
-      {/* Additional sections for CameraPage */}
       {/* Sections go here */}
       <DemoForm />
 

@@ -5,7 +5,9 @@ const HeroHome = (): JSX.Element => {
     <>
       {/* Image with Overlay Section */}
       <section className="w-full m-0 overflow-hidden">
-        <div className="relative m-0 w-full h-screen"> {/* Full-screen height */}
+        <div className="relative m-0 w-full h-screen">
+          {" "}
+          {/* Full-screen height */}
           <Image
             src="/IMG_1869.png"
             alt="Background Image"
@@ -13,7 +15,6 @@ const HeroHome = (): JSX.Element => {
             className="object-cover w-full h-full"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
           {/* Text Overlay */}
           <div
             className="absolute inset-0 flex flex-col justify-start z-10"
@@ -74,12 +75,10 @@ const HeroHome = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Key Features Section */}
-            {/* Key Features Section */}
-            <section className="w-full overflow-hidden py-10 lg:py-20">
+      <section className="w-full overflow-hidden py-10 lg:py-20">
         <div
-          className="w-full px-[6.25%]" // Ensures consistent padding for all screen sizes
+          className="w-full px-[6.25%]" // Consistent padding for all screen sizes
           style={{
             paddingLeft: "6.25%", // 120px / 1920px
             paddingRight: "6.25%", // 120px / 1920px
@@ -139,13 +138,14 @@ const HeroHome = (): JSX.Element => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="p-8"
+                className="p-4 flex flex-col justify-start items-start"
                 style={{
-                  minHeight: "300px", // Fixed height for each row
+                  height: "auto", // Allows cells to shrink to their content
+                  gap: "10px", // Consistent spacing between title and description
                 }}
               >
                 <h3
-                  className="mb-[2.5vw] text-dozer-black"
+                  className="text-dozer-black py-6"
                   style={{
                     fontFamily: "'Share Tech Mono', monospace",
                     fontWeight: 400,

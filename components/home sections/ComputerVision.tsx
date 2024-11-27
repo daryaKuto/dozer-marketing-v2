@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SquareIcon } from "../icons/Icons"; // Import the SquareIcon component
 
 const ComputerVision: React.FC = () => {
   return (
@@ -7,17 +8,33 @@ const ComputerVision: React.FC = () => {
       {/* Image Block */}
       <div className="relative w-full flex justify-left items-center">
         {/* Main Large Image */}
-        <Image
-          src="/cabin.png"
-          alt="Main Machine Image"
-          width={330}
-          height={500}
-          className="shadow-md object-cover z-10"
-        />
+        <div
+          className="relative z-10"
+          style={{
+            maxWidth: "330px", // Maximum width for larger screens
+            width: "50%", // Shrinks to 50% of the screen width on smaller screens
+            aspectRatio: "330 / 500", // Maintain aspect ratio
+          }}
+        >
+          <Image
+            src="/cabin.png"
+            alt="Main Machine Image"
+            layout="intrinsic"
+            width={330}
+            height={500}
+            className="shadow-md object-cover rounded"
+          />
+        </div>
 
-        
         {/* Alert Box (Top Right) */}
-        <div className="absolute top-10 right-10 w-[300px] p-4 bg-white shadow-lg z-20">
+        <div
+          className="absolute top-10 right-10 bg-white shadow-lg z-20"
+          style={{
+            maxWidth: "300px", // Max width of the box
+            width: "80%", // Shrinks dynamically for smaller screens
+            padding: "1rem", // Consistent padding
+          }}
+        >
           <div className="flex items-center space-x-4">
             {/* Yellow Border Circle with Yellow Exclamation */}
             <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border-2 border-dozer-yellow rounded-full">
@@ -41,7 +58,7 @@ const ComputerVision: React.FC = () => {
           </div>
         </div>
 
-       
+        {/* Night Video Image */}
         <div
           className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-10 z-30"
           style={{
@@ -72,17 +89,19 @@ const ComputerVision: React.FC = () => {
           operators.
         </p>
         <ul className="space-y-4">
-          <li className="flex items-start">
-            <span className="w-4 h-4 bg-dozer-yellow mr-4"></span>
-            <p className="text-base text-gray-700">
+          <li className="flex items-center">
+            {/* Square Icon */}
+            <SquareIcon className="w-4 h-4 flex-shrink-0 mr-4 text-dozer-yellow" />
+            <span className="text-base text-gray-700">
               Measures proximity to people, vehicles, and objects
-            </p>
+            </span>
           </li>
-          <li className="flex items-start">
-            <span className="w-4 h-4 bg-dozer-yellow mr-4"></span>
-            <p className="text-base text-gray-700">
+          <li className="flex items-center">
+            {/* Square Icon */}
+            <SquareIcon className="w-4 h-4 flex-shrink-0 mr-4 text-dozer-yellow" />
+            <span className="text-base text-gray-700">
               Alerts are recorded and notifications are sent to managers
-            </p>
+            </span>
           </li>
         </ul>
         <div className="mt-6">
