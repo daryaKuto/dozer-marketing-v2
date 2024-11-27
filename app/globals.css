@@ -1,34 +1,45 @@
 /* app/globals.css */
-/* @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap'); */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* Prevent overflow across all pages */
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+  width: 100%; /* Ensure body doesn't exceed screen width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
-body {
-  font-family: Gotham;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Ensure all containers respect the screen size */
+.container, .max-container {
+  width: 100%;
+  overflow-x: hidden; /* Prevent unintentional scrollbars */
 }
 
 @layer components {
-    .all-\[unset\] {
-        all: unset;
-    }
+  .all-\[unset\] {
+    all: unset;
+  }
 }
+
 @layer utilities {
   .max-container {
-    @apply mx-auto max-w-[1440px];
+    @apply mx-auto max-w-[1440px] w-full; /* Ensure the container spans full width */
   }
   .font-share-tech-mono {
-    font-family: 'Share Tech Mono', monospace;
+    font-family: "Share Tech Mono", monospace;
   }
   .padding-container {
-    @apply px-6 lg:px-[120px] lg:pr-[140px] 3xl:px-0;
+    @apply px-6; /* Base padding */
+    @apply md:px-[6.25%]; /* Responsive spacing relative to screen width */
   }
 
   .flexCenter {
@@ -49,67 +60,67 @@ body {
 }
 
 :root {
-    --body-text-2-font-family: "Gotham", Helvetica;
-    --body-text-2-font-size: 16px;
-    --body-text-2-font-style: normal;
-    --body-text-2-font-weight: 500;
-    --body-text-2-letter-spacing: 0px;
-    --body-text-2-line-height: normal;
-    --body-text-font-family: "Gotham", Helvetica;
-    --body-text-font-size: 20px;
-    --body-text-font-style: normal;
-    --body-text-font-weight: 400;
-    --body-text-letter-spacing: 0px;
-    --body-text-line-height: normal;
-    --dark-grey: rgba(92, 99, 116, 1);
-    --darker-grey: rgba(77, 82, 96, 1);
-    --dozer-white: rgba(244, 247, 249, 1);
-    --dozer-yellow: rgba(253, 172, 19, 1);
-    --footer-font-family: "Gotham", Helvetica;
-    --footer-font-size: 16px;
-    --footer-font-style: normal;
-    --footer-font-weight: 500;
-    --footer-letter-spacing: 0px;
-    --footer-line-height: normal;
-    --light-gray: rgba(192, 199, 209, 1);
-    --links-font-family: "Gotham", Helvetica;
-    --links-font-size: 25px;
-    --links-font-style: normal;
-    --links-font-weight: 700;
-    --links-letter-spacing: 0px;
-    --links-line-height: normal;
-    --medium-gray-shadow: rgba(70, 74, 87, 1);
-    --medium-grey: rgba(167, 170, 177, 1);
-    --nav-bar-font-family: "Gotham", Helvetica;
-    --nav-bar-font-size: 20px;
-    --nav-bar-font-style: normal;
-    --nav-bar-font-weight: 500;
-    --nav-bar-letter-spacing: 0px;
-    --nav-bar-line-height: normal;
-    --page-subtitle-font-family: "Gotham", Helvetica;
-    --page-subtitle-font-size: 30px;
-    --page-subtitle-font-style: normal;
-    --page-subtitle-font-weight: 400;
-    --page-subtitle-letter-spacing: 0px;
-    --page-subtitle-line-height: normal;
-    --page-title-font-family: "Gotham", Helvetica;
-    --page-title-font-size: 60px;
-    --page-title-font-style: normal;
-    --page-title-font-weight: 500;
-    --page-title-letter-spacing: 0px;
-    --page-title-line-height: normal;
-    --section-subtitle-font-family: "Share Tech Mono", Helvetica;
-    --section-subtitle-font-size: 30px;
-    --section-subtitle-font-style: normal;
-    --section-subtitle-font-weight: 400;
-    --section-subtitle-letter-spacing: 0px;
-    --section-subtitle-line-height: normal;
-    --section-title-font-family: "Share Tech Mono", Helvetica;
-    --section-title-font-size: 60px;
-    --section-title-font-style: normal;
-    --section-title-font-weight: 400;
-    --section-title-letter-spacing: 0px;
-    --section-title-line-height: normal;
+  --body-text-2-font-family: "Gotham", Helvetica;
+  --body-text-2-font-size: 16px;
+  --body-text-2-font-style: normal;
+  --body-text-2-font-weight: 500;
+  --body-text-2-letter-spacing: 0px;
+  --body-text-2-line-height: normal;
+  --body-text-font-family: "Gotham", Helvetica;
+  --body-text-font-size: 20px;
+  --body-text-font-style: normal;
+  --body-text-font-weight: 400;
+  --body-text-letter-spacing: 0px;
+  --body-text-line-height: normal;
+  --dark-grey: rgba(92, 99, 116, 1);
+  --darker-grey: rgba(77, 82, 96, 1);
+  --dozer-white: rgba(244, 247, 249, 1);
+  --dozer-yellow: rgba(253, 172, 19, 1);
+  --footer-font-family: "Gotham", Helvetica;
+  --footer-font-size: 16px;
+  --footer-font-style: normal;
+  --footer-font-weight: 500;
+  --footer-letter-spacing: 0px;
+  --footer-line-height: normal;
+  --light-gray: rgba(192, 199, 209, 1);
+  --links-font-family: "Gotham", Helvetica;
+  --links-font-size: 25px;
+  --links-font-style: normal;
+  --links-font-weight: 700;
+  --links-letter-spacing: 0px;
+  --links-line-height: normal;
+  --medium-gray-shadow: rgba(70, 74, 87, 1);
+  --medium-grey: rgba(167, 170, 177, 1);
+  --nav-bar-font-family: "Gotham", Helvetica;
+  --nav-bar-font-size: 20px;
+  --nav-bar-font-style: normal;
+  --nav-bar-font-weight: 500;
+  --nav-bar-letter-spacing: 0px;
+  --nav-bar-line-height: normal;
+  --page-subtitle-font-family: "Gotham", Helvetica;
+  --page-subtitle-font-size: 30px;
+  --page-subtitle-font-style: normal;
+  --page-subtitle-font-weight: 400;
+  --page-subtitle-letter-spacing: 0px;
+  --page-subtitle-line-height: normal;
+  --page-title-font-family: "Gotham", Helvetica;
+  --page-title-font-size: 60px;
+  --page-title-font-style: normal;
+  --page-title-font-weight: 500;
+  --page-title-letter-spacing: 0px;
+  --page-title-line-height: normal;
+  --section-subtitle-font-family: "Share Tech Mono", Helvetica;
+  --section-subtitle-font-size: 30px;
+  --section-subtitle-font-style: normal;
+  --section-subtitle-font-weight: 400;
+  --section-subtitle-letter-spacing: 0px;
+  --section-subtitle-line-height: normal;
+  --section-title-font-family: "Share Tech Mono", Helvetica;
+  --section-title-font-size: 60px;
+  --section-title-font-style: normal;
+  --section-title-font-weight: 400;
+  --section-title-letter-spacing: 0px;
+  --section-title-line-height: normal;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

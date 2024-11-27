@@ -4,8 +4,8 @@ const HeroHome = (): JSX.Element => {
   return (
     <>
       {/* Image with Overlay Section */}
-      <section className="w-full overflow-hidden">
-        <div className="relative w-full h-screen"> {/* Full-screen height */}
+      <section className="w-full m-0 overflow-hidden">
+        <div className="relative m-0 w-full h-screen"> {/* Full-screen height */}
           <Image
             src="/IMG_1869.png"
             alt="Background Image"
@@ -22,7 +22,7 @@ const HeroHome = (): JSX.Element => {
             }}
           >
             <div
-              className="w-full max-w-[1440px] mx-auto px-[6.25%] flex flex-col"
+              className="w-full mx-auto px-[6.25%] flex flex-col" //max-w-[1440px] removed
               style={{
                 paddingTop: "200px", // Adjusted vertical padding for small screens
               }}
@@ -76,89 +76,98 @@ const HeroHome = (): JSX.Element => {
       </section>
 
       {/* Key Features Section */}
-      <section className="max-container padding-container py-10 pb-32 lg:py-20">
-        <div className="text-left mb-10">
-          <h2
-            className="text-dozer-black mb-6"
-            style={{
-              fontFamily: "'Share Tech Mono', monospace",
-              fontWeight: 400,
-              fontSize: "clamp(2.5rem, 4vw, 3.75rem)", // Scales between 40px and 60px
-            }}
-          >
-            Key Features
-          </h2>
-        </div>
-
-        {/* Features Grid */}
+            {/* Key Features Section */}
+            <section className="w-full overflow-hidden py-10 lg:py-20">
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-x divide-y border border-gray-300"
+          className="w-full px-[6.25%]" // Ensures consistent padding for all screen sizes
           style={{
-            width: "100%", // Full width
+            paddingLeft: "6.25%", // 120px / 1920px
+            paddingRight: "6.25%", // 120px / 1920px
           }}
         >
-          {[
-            {
-              title: "Increase operator awareness",
-              description:
-                "Depth-sensing cameras alert operators to people, vehicles, and objects around equipment in real time.",
-            },
-            {
-              title: "Make your fleet safer with data",
-              description:
-                "Alert videos are sent to safety managers, supervisors, and leadership. Dozer highlights risk trends across equipment and job sites in your dashboard.",
-            },
-            {
-              title: "Secure your jobsite",
-              description:
-                "Dozer is your night watchdog recording tagged events and turning on flood lights to deter trespassers.",
-            },
-            {
-              title: "Watch progress live or save for later",
-              description:
-                "Stream live video to see current job progress across sites. Recall past video for safety training, incident documentation, dispute resolution, or rework analysis.",
-            },
-            {
-              title: "Modular and scalable",
-              description:
-                "Installed on any piece of equipment in under an hour. Field serviceable with easy-to-replace parts.",
-            },
-            {
-              title: "Ruggedized hardware",
-              description:
-                "Mil-spec rated enclosures that can withstand heat, cold, dust, mud, or rain for years.",
-            },
-          ].map((feature, index) => (
-            <div
-              key={index}
-              className="p-8"
+          <div className="text-left mb-10">
+            <h2
+              className="text-dozer-black mb-6"
               style={{
-                minHeight: "300px", // Fixed height for each row
+                fontFamily: "'Share Tech Mono', monospace",
+                fontWeight: 400,
+                fontSize: "clamp(2.5rem, 4vw, 3.75rem)", // Scales between 40px and 60px
               }}
             >
-              <h3
-                className="mb-[2.5vw] text-dozer-black"
+              Key Features
+            </h2>
+          </div>
+
+          {/* Features Grid */}
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-x divide-y border border-gray-300"
+            style={{
+              width: "100%", // Full width for the grid
+            }}
+          >
+            {[
+              {
+                title: "Increase operator awareness",
+                description:
+                  "Depth-sensing cameras alert operators to people, vehicles, and objects around equipment in real time.",
+              },
+              {
+                title: "Make your fleet safer with data",
+                description:
+                  "Alert videos are sent to safety managers, supervisors, and leadership. Dozer highlights risk trends across equipment and job sites in your dashboard.",
+              },
+              {
+                title: "Secure your jobsite",
+                description:
+                  "Dozer is your night watchdog recording tagged events and turning on flood lights to deter trespassers.",
+              },
+              {
+                title: "Watch progress live or save for later",
+                description:
+                  "Stream live video to see current job progress across sites. Recall past video for safety training, incident documentation, dispute resolution, or rework analysis.",
+              },
+              {
+                title: "Modular and scalable",
+                description:
+                  "Installed on any piece of equipment in under an hour. Field serviceable with easy-to-replace parts.",
+              },
+              {
+                title: "Ruggedized hardware",
+                description:
+                  "Mil-spec rated enclosures that can withstand heat, cold, dust, mud, or rain for years.",
+              },
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="p-8"
                 style={{
-                  fontFamily: "'Share Tech Mono', monospace",
-                  fontWeight: 400,
-                  fontSize: "clamp(1.25rem, 2vw, 1.5rem)", // Scales between 20px and 24px
+                  minHeight: "300px", // Fixed height for each row
                 }}
               >
-                {feature.title}
-              </h3>
-              <p
-                className="text-dozer-black"
-                style={{
-                  fontFamily: "Gotham",
-                  fontWeight: 400,
-                  fontSize: "clamp(1rem, 1.5vw, 1.125rem)", // Scales between 16px and 18px
-                  lineHeight: "1.5",
-                }}
-              >
-                {feature.description}
-              </p>
-            </div>
-          ))}
+                <h3
+                  className="mb-[2.5vw] text-dozer-black"
+                  style={{
+                    fontFamily: "'Share Tech Mono', monospace",
+                    fontWeight: 400,
+                    fontSize: "clamp(1.25rem, 2vw, 1.5rem)", // Scales between 20px and 24px
+                  }}
+                >
+                  {feature.title}
+                </h3>
+                <p
+                  className="text-dozer-black"
+                  style={{
+                    fontFamily: "Gotham",
+                    fontWeight: 400,
+                    fontSize: "clamp(1rem, 1.5vw, 1.125rem)", // Scales between 16px and 18px
+                    lineHeight: "1.5",
+                  }}
+                >
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>
