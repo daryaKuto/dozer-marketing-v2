@@ -3,68 +3,69 @@ import Image from "next/image";
 const HeroHome = (): JSX.Element => {
   return (
     <>
-      {/* Image with Overlay Section */}
+      {/* Hero Section */}
       <section className="w-full m-0 overflow-hidden">
-        <div className="relative m-0 w-full h-screen">
-          {" "}
-          {/* Full-screen height */}
+        {/* Wrapper to keep the image and text as a single responsive block */}
+        <div
+          className="relative w-full"
+          style={{
+            aspectRatio: "16/9", // Maintain aspect ratio for the section
+            minHeight: "600px", // Prevent shrinking below 600px
+          }}
+        >
+          {/* Hero Image */}
           <Image
             src="/IMG_1869.png"
             alt="Background Image"
-            fill
-            className="object-cover w-full h-full"
+            layout="fill"
+            className="object-cover"
+            priority
           />
+          {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
           {/* Text Overlay */}
           <div
-            className="absolute inset-0 flex flex-col justify-start z-10"
-            style={{
-              paddingTop: "15%", // Adjusted offset for navbar
-            }}
+            className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-12 lg:px-20 z-10"
           >
-            <div
-              className="w-full mx-auto px-[6.25%] flex flex-col" //max-w-[1440px] removed
-              style={{
-                paddingTop: "200px", // Adjusted vertical padding for small screens
-              }}
-            >
+            <div className="w-full max-w-4xl">
               <h1
-                className="text-dozer-yellow leading-tight"
+                className="text-dozer-yellow leading-tight break-words"
                 style={{
                   fontFamily: "Gotham",
                   fontWeight: 500,
-                  fontSize: "clamp(2.6rem, 3.5vw, 5rem)", // Scales between 50px and 80px
+                  fontSize: "clamp(2rem, 4vw, 6rem)", // Dynamically scales
                 }}
               >
                 Monitor your
               </h1>
               <h1
-                className="text-dozer-yellow leading-tight"
+                className="text-dozer-yellow leading-tight break-words"
                 style={{
                   fontFamily: "Gotham",
                   fontWeight: 500,
-                  fontSize: "clamp(2.6rem, 3.5vw, 5rem)", // Scales between 50px and 80px
+                  fontSize: "clamp(2rem, 4vw, 6rem)",
                 }}
               >
                 equipment from
               </h1>
               <h1
-                className="text-dozer-yellow leading-tight"
+                className="text-dozer-yellow leading-tight break-words"
                 style={{
                   fontFamily: "Gotham",
                   fontWeight: 500,
-                  fontSize: "clamp(2.6rem, 3.5vw, 5rem)", // Scales between 50px and 80px
+                  fontSize: "clamp(2rem, 4vw, 6rem)",
                 }}
               >
                 anywhere
               </h1>
               <p
-                className="text-white max-w-[50%] mb-[2vw]"
+                className="text-white mt-4 max-w-lg break-words"
                 style={{
                   fontFamily: "Gotham",
                   fontWeight: 400,
-                  fontSize: "clamp(1rem, 1.8vw, 1.3rem)", // Scales between 20px and 24px
-                  lineHeight: "clamp(1.5rem, 2.5vw, 2rem)", // Scales between 28px and 40px
+                  fontSize: "clamp(1rem, 1.8vw, 1.3rem)",
+                  lineHeight: "clamp(1.3rem, 2.5vw, 2rem)",
                 }}
               >
                 One system to make your equipment fleet safer, more secure, and
@@ -75,22 +76,17 @@ const HeroHome = (): JSX.Element => {
           </div>
         </div>
       </section>
+
       {/* Key Features Section */}
       <section className="w-full overflow-hidden py-10 lg:py-20">
-        <div
-          className="w-full px-[6.25%]" // Consistent padding for all screen sizes
-          style={{
-            paddingLeft: "6.25%", // 120px / 1920px
-            paddingRight: "6.25%", // 120px / 1920px
-          }}
-        >
+        <div className="w-full px-[6.25%]">
           <div className="text-left mb-10">
             <h2
               className="text-dozer-black mb-6"
               style={{
                 fontFamily: "'Share Tech Mono', monospace",
                 fontWeight: 400,
-                fontSize: "clamp(2.5rem, 4vw, 3.75rem)", // Scales between 40px and 60px
+                fontSize: "clamp(2.5rem, 4vw, 3.75rem)", // Dynamically scales
               }}
             >
               Key Features
@@ -98,12 +94,7 @@ const HeroHome = (): JSX.Element => {
           </div>
 
           {/* Features Grid */}
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-x divide-y border border-gray-300"
-            style={{
-              width: "100%", // Full width for the grid
-            }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-x divide-y border border-gray-300">
             {[
               {
                 title: "Increase operator awareness",
@@ -140,8 +131,7 @@ const HeroHome = (): JSX.Element => {
                 key={index}
                 className="p-4 flex flex-col justify-start items-start"
                 style={{
-                  height: "auto", // Allows cells to shrink to their content
-                  gap: "10px", // Consistent spacing between title and description
+                  gap: "10px",
                 }}
               >
                 <h3
@@ -149,7 +139,7 @@ const HeroHome = (): JSX.Element => {
                   style={{
                     fontFamily: "'Share Tech Mono', monospace",
                     fontWeight: 400,
-                    fontSize: "clamp(1.25rem, 2vw, 1.5rem)", // Scales between 20px and 24px
+                    fontSize: "clamp(1.25rem, 2vw, 1.5rem)",
                   }}
                 >
                   {feature.title}
@@ -159,7 +149,7 @@ const HeroHome = (): JSX.Element => {
                   style={{
                     fontFamily: "Gotham",
                     fontWeight: 400,
-                    fontSize: "clamp(1rem, 1.5vw, 1.125rem)", // Scales between 16px and 18px
+                    fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
                     lineHeight: "1.5",
                   }}
                 >
