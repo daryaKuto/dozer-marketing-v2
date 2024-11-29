@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-ses": "^3.699.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.1.5",
     "aws-sdk": "^2.1692.0",
