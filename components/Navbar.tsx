@@ -26,12 +26,12 @@ const Navbar: React.FC = () => {
   return (
     <div
       className={`fixed w-full top-0 z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-black bg-opacity-80" : "bg-transparent"
+        isScrolled ? "bg-black bg-opacity-90" : "bg-transparent"
       }`}
     >
       <nav className="uppercase flex items-center justify-between px-6 py-4 font-nav-bar text-dozer-white text-[16px] font-medium tracking-[0px] leading-normal">
-        {/* Section 1: Logo */}
-        <Link href="/">
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0">
           <Image
             src="/dozer-logo-public.png"
             alt="Logo"
@@ -40,7 +40,15 @@ const Navbar: React.FC = () => {
           />
         </Link>
 
-        {/* Section 2: Navigation Links */}
+        {/* Request Demo Button (Always Visible) */}
+        <Link
+          href="/demo"
+          className="lg:hidden uppercase bg-dozer-yellow text-black px-4 py-2 font-medium text-[16px] hover:bg-orange-600 transition-colors duration-200"
+        >
+          Request Demo
+        </Link>
+
+        {/* Navigation Links */}
         <ul className="hidden lg:flex h-full gap-8 md:gap-6 sm:gap-4 space-x-6 md:space-x-4 sm:space-x-2">
           {NAV_LINKS.map((link) => (
             <Link
@@ -55,7 +63,25 @@ const Navbar: React.FC = () => {
           ))}
         </ul>
 
-        {/* Section 3: Hamburger Menu for Small Devices */}
+        {/* Login and Request Demo Buttons (Large Screens) */}
+        <div className="hidden lg:flex items-center space-x-4">
+          <a
+            href="https://beta.app.dozer.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-[16px] hover:text-dozer-yellow"
+          >
+            Login
+          </a>
+          <Link
+            href="/demo"
+            className="uppercase bg-dozer-yellow text-black px-4 py-2 font-medium text-[16px] hover:bg-orange-600 transition-colors duration-200"
+          >
+            Request Demo
+          </Link>
+        </div>
+
+        {/* Hamburger Menu Toggle */}
         <div className="lg:hidden">
           <button
             onClick={toggleMenu}
@@ -79,30 +105,11 @@ const Navbar: React.FC = () => {
             </svg>
           </button>
         </div>
-
-        {/* Section 4: Login and Request Demo */}
-        <div className="hidden lg:flex items-center space-x-4">
-          <a
-            href="https://beta.app.dozer.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-[16px] hover:text-dozer-yellow"
-          >
-            Login
-          </a>
-          <Link
-            href="/demo"
-            className="uppercase border border-white text-white px-4 py-2 hover:bg-dozer-yellow hover:text-black font-medium text-[16px] transition-colors duration-200"
-          >
-            Request Demo
-          </Link>
-        </div>
       </nav>
 
       {/* Mobile Full-Screen Menu */}
       {menuOpen && (
         <div className="fixed inset-0 bg-black text-dozer-white flex flex-col items-center justify-center space-y-8 z-50">
-          {/* Close Button */}
           {/* Close Button */}
           <button
             onClick={toggleMenu}
@@ -141,7 +148,7 @@ const Navbar: React.FC = () => {
             </Link>
           ))}
 
-          {/* Login and Request Demo */}
+          {/* Login */}
           <a
             href="https://beta.app.dozer.ai"
             target="_blank"
@@ -150,6 +157,8 @@ const Navbar: React.FC = () => {
           >
             Login
           </a>
+
+          {/* Request Demo */}
           <Link
             href="/demo"
             onClick={() => setMenuOpen(false)}
