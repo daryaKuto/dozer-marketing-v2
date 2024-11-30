@@ -162,7 +162,7 @@ const Navbar: React.FC = () => {
           <Link
             href="/demo"
             onClick={() => setMenuOpen(false)}
-            className="uppercase bg-dozer-yellow text-black px-6 py-3 text-center font-medium text-[16px] hover:bg-orange-600 transition-colors duration-200"
+            className="uppercase bg-dozer-yellow text-black px-6 py-3 text-center font-medium text-[16px] hover:bg-white transition-colors duration-200"
           >
             Request Demo
           </Link>
