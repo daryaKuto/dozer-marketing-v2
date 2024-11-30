@@ -4,27 +4,38 @@ import Image from "next/image";
 
 const CameraSec2 = () => {
   return (
-    <section className="max-container padding-container py-16 grid grid-cols-1 lg:grid-cols-2 gap-20 px-4 sm:px-8 lg:px-16 items-center">
+    <section className="w-full padding-container py-16 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
       {/* Text Content */}
-      <div className="space-y-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-section-title mb-4">
+      <div>
+        <h2 className="text-3xl font-bold font-section-title mb-6">
           Proximity measurements with centimeter accuracy
         </h2>
-        <div className="border-b-4 border-dozer-yellow w-12 sm:w-16 mb-4"></div>
-        <p className="text-sm sm:text-base md:text-md text-gray-700 mb-6">
+        <div className="border-b-4 border-dozer-yellow w-16 mb-6"></div>
+        <p className="text-base text-gray-700 mb-4">
           Using point-cloud measurements, Dozer’s cameras assess proximity to objects in real-time, acting as a virtual spotter to increase operator awareness.
         </p>
       </div>
 
-      {/* Right Image with GIF */}
-      <div className="relative w-full h-auto flex justify-center lg:justify-end">
-        <Image
-          src="/pointcloud_trimmed.gif" 
-          alt="Proximity measurement and point-cloud visualization"
-          width={653} 
-          height={326} 
-          className="shadow-md object-cover rounded-lg"
-        />
+      {/* Image Content */}
+      <div className="relative w-full flex justify-center items-center">
+        {/* Main Image */}
+        <div
+          className="relative z-10"
+          style={{
+            maxWidth: "653px", // Matches the original dimensions
+            width: "100%", // Full width for smaller screens
+            aspectRatio: "653 / 326", // Maintain aspect ratio for consistency
+          }}
+        >
+          <Image
+            src="/pointcloud_trimmed.gif" // Replace with the correct image path
+            alt="Proximity measurement and point-cloud visualization"
+            layout="intrinsic"
+            width={653}
+            height={326}
+            className="shadow-md object-cover rounded-lg"
+          />
+        </div>
       </div>
     </section>
   );
