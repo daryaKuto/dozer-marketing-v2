@@ -22,14 +22,13 @@ const DashboardsPage = (): JSX.Element => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dozer-yellow mb-4 leading-tight">
             mobile
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white max-w-full md:max-w-2xl uppercase">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white max-w-full md:max-w-2xl">
             Powerful dashboards combine vehicle GPS, video, and safety data to give a full picture of how your fleet is performing.</p>
           </div>
         </div>
       </section>
 
-      {/* Additional sections for CameraPage */}
-      {/* Sections go here */}
+      {/* Additional sections go here */}
       <DashboardsSec1 />
       <DashboardsSec2 />
       <DashboardsSec3 />

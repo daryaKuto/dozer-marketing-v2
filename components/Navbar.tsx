@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
         {/* Request Demo Button (Always Visible) */}
         <Link
           href="/demo"
-          className="lg:hidden uppercase bg-dozer-yellow text-black px-4 py-2 font-medium text-[16px] hover:bg-orange-600 transition-colors duration-200"
+          className="lg:hidden uppercase bg-dozer-yellow text-black px-4 py-2 font-medium text-[16px] hover:bg-white transition-colors duration-200"
         >
           Request Demo
         </Link>
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
           </a>
           <Link
             href="/demo"
-            className="uppercase bg-dozer-yellow text-black px-4 py-2 font-medium text-[16px] hover:bg-orange-600 transition-colors duration-200"
+            className="uppercase bg-dozer-yellow text-black px-4 py-2 font-medium text-[16px] hover:bg-white transition-colors duration-200"
           >
             Request Demo
           </Link>
