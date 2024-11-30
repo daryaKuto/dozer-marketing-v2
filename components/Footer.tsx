@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           <h3 className="text-base font-bold text-gray-800 mb-4">Product</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link href="/camera" className="hover:text-dozer-yellow">
+              <Link href="/cameras" className="hover:text-dozer-yellow">
                 Camera
               </Link>
             </li>
@@ -33,9 +33,14 @@ const Footer: React.FC = () => {
                 Intelligence
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/installation" className="hover:text-dozer-yellow">
                 Installation
+              </Link>
+            </li> */}
+             <li>
+              <Link href="/dashboards" className="hover:text-dozer-yellow">
+                Dashboards
               </Link>
             </li>
           </ul>
@@ -45,11 +50,11 @@ const Footer: React.FC = () => {
         <div className="uppercase">
           <h3 className="text-base font-bold text-gray-800 mb-4">Company</h3>
           <ul className="space-y-2 text-sm">
-            <li>
+            {/* <li>
               <Link href="/about" className="hover:text-dozer-yellow">
                 About Us
               </Link>
-            </li>
+            </li> */}
             {/* <li>
               <Link href="/careers" className="hover:text-dozer-yellow">
                 Careers
@@ -67,11 +72,11 @@ const Footer: React.FC = () => {
         <div className="uppercase">
           <h3 className="text-base font-bold text-gray-800 mb-4">Support</h3>
           <ul className="space-y-2 text-sm">
-            <li>
+            {/* <li>
               <Link href="/support" className="hover:text-dozer-yellow">
                 Customer Support
               </Link>
-            </li>
+            </li> */}
             {/* <li>
               <Link href="/knowledge-base" className="hover:text-dozer-yellow">
                 Knowledge Base
@@ -92,6 +97,11 @@ const Footer: React.FC = () => {
                 Trust
               </Link>
             </li> */}
+             <li>
+              <Link href="/demo" className="hover:text-dozer-yellow">
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
 
