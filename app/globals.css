@@ -72,10 +72,10 @@ html, body {
   --body-text-font-weight: 400;
   --body-text-letter-spacing: 0px;
   --body-text-line-height: normal;
-  --dark-grey: rgba(92, 99, 116, 1);
-  --darker-grey: rgba(77, 82, 96, 1);
-  --dozer-white: rgba(244, 247, 249, 1);
-  --dozer-yellow: rgba(253, 172, 19, 1);
+  --dark-grey: #5c6374;
+  --darker-grey: #4d5260;
+  --dozer-white: #f4f7f9;
+  --dozer-yellow: #fdac13;
   --footer-font-family: "Gotham", Helvetica;
   --footer-font-size: 16px;
   --footer-font-style: normal;

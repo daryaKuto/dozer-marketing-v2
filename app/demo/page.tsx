@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import DemoForm from '@/components/DemoForm';
+import DemoFormHubspot from '@/components/DemoFormHubspot';
 
 
 const DemoPage = (): JSX.Element => {
@@ -20,8 +21,9 @@ const DemoPage = (): JSX.Element => {
           </div>
         </div>
       </section>
-      {/* Sections go here */}
-      <DemoForm />
+      {/* Replace DemoForm with DemoFormHubspot */}
+      {/* <DemoForm /> */}
+      <DemoFormHubspot/>
 
     </div>
   );
