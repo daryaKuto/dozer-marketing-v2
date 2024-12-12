@@ -1,11 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Joi from 'joi';
-import AWS from 'aws-sdk';
-// import type { NextApiRequest, NextApiResponse } from 'next';
-
-// Configure AWS SES
-AWS.config.update({ region: 'us-east-2' });
-// const ses = new AWS.SES({ apiVersion: '2010-12-01' });
 
 // Validation schema using Joi
 const requestDemoSchema = Joi.object({
@@ -19,42 +13,6 @@ const requestDemoSchema = Joi.object({
   fleetSize: Joi.number().min(1).required(),
   locations: Joi.array().items(Joi.string().required()).min(1).required()
 });
-
-// export async function POST(req: NextApiRequest) {
-//   if (req.method === 'POST') {
-//     return await addEmailUser(req);
-//   } else {
-//     return NextResponse.json({
-//       status: 405
-//     });
-//   }
-// }
-
-// const addEmailUser = async (req: NextApiRequest) => {
-//   console.log('request ', req);
-
-//   console.log('process.env', process.env.BACKEND_BASE_URL);
-//   try {
-//     await fetch(`${process.env.BACKEND_BASE_URL}/form/submit`, {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify(req.body)
-//     });
-//   } catch (err: any) {
-//     console.log('err', err);
-//     return NextResponse.json({
-//       message: err?.details[0].message,
-//       status: 500
-//     });
-//   }
-
-//   return NextResponse.json({
-//     message: 'Success',
-//     status: 200
-//   });
-// };
 
 export async function POST(req: NextRequest) {
   try {
@@ -93,49 +51,3 @@ export async function POST(req: NextRequest) {
     });
   }
 }
-
-//   // Email parameters for AWS SES
-//   const sendEmailParams = {
-//     Source: "alamgir@dozer.ai",
-//     Destination: {
-//       ToAddresses: ["alamgir@dozer.ai", "support@dozer.ai"],
-//     },
-//     Message: {
-//       Subject: {
-//         Charset: "UTF-8",
-//         Data: "New Demo Request",
-//       },
-//       Body: {
-//         Text: {
-//           Charset: "UTF-8",
-//           Data: `
-//             New demo request:
-
-//             Full Name: ${fullName}
-//             Email: ${email}
-//             Company Name: ${companyName}
-//             Job Title: ${jobTitle}
-//             Phone Number: ${phoneNumber}
-//             Fleet Size: ${fleetSize}
-//             Locations: ${locations.join(", ")}
-//           `,
-//         },
-//       },
-//     },
-//     ReplyToAddresses: ["alamgir@dozer.ai"],
-//   };
-
-//   // Send email using AWS SES
-//   await ses.sendEmail(sendEmailParams).promise();
-
-//   return NextResponse.json(
-//     { status: "ok", message: "Form submitted successfully!" },
-//     { status: 200 }
-//   );
-// } catch (error) {
-//   console.error("Error handling request:", error);
-//   return NextResponse.json(
-//     { message: "Internal Server Error" },
-//     { status: 500 }
-//   );
-// }
