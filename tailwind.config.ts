@@ -1,6 +1,6 @@
 // tailwind.config.js
 module.exports = {
-  content: ["./app/**/*.{html,js,ts,jsx,tsx}", "./components/**/*.{html,js,ts,jsx,tsx}", "./app/globals.css"],
+  content: ["./app/**/*.{html,js,ts,jsx,tsx}", "./components/**/*.{html,js,ts,jsx,tsx}", "./pages/**/*.{html,js,ts,jsx,tsx}", "./app/globals.css"],
   theme: {
       extend: {
           colors: {
@@ -22,6 +22,7 @@ module.exports = {
               "page-title": "var(--page-title-font-family)",
               "section-subtitle": "var(--section-subtitle-font-family)",
               "section-title": "var(--section-title-font-family)",
+              "gotham-book": ["Gotham", "sans-serif"], // Default Gotham font
           },
           screens: {
             xs: '400px',
