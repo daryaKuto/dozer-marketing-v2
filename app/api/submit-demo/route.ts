@@ -4,7 +4,8 @@ import Joi from 'joi';
 // Validation schema using Joi
 const requestDemoSchema = Joi.object({
   email: Joi.string().email().required(),
-  fullName: Joi.string().required(),
+  firstName: Joi.string().required(),
+  lastName: Joi.string().required(),
   companyName: Joi.string().required(),
   jobTitle: Joi.string().required(),
   phoneNumber: Joi.string()
