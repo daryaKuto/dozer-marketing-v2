@@ -1,5 +1,5 @@
 // components/VideoPlayer.tsx
-import React from "react";
+import React from 'react';
 
 type VideoPlayerProps = {
   src: string;
@@ -11,12 +11,12 @@ type VideoPlayerProps = {
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   src,
-  controls = true,
+  controls = false,
   autoplay = false,
-  loop = false,
-  muted = true, // Autoplay works better with muted video
+  loop = true,
+  muted = true // Autoplay works better with muted video
 }) => (
-  <div className="video-container w-full">
+  <div className='video-container w-full sm:w-auto min-h-5/6'>
     <video
       src={src}
       autoPlay={autoplay}
@@ -24,7 +24,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       loop={loop}
       muted={muted}
       playsInline
-      className="w-full h-auto object-cover"
+      className='w-full h-auto object-cover'
+      style={{ height: '36rem' }}
     />
   </div>
 );
